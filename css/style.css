@@ -28,9 +28,8 @@ body {
 .container {
     padding-left: 15px;
     padding-right: 15px;
-    margin-left:  auto;
-    margin-right: auto;
-  
+    margin-left:  a;
+    margin-right: auto; 
 }
 /* small */
 @media (min-width: 768px) {
@@ -43,17 +42,18 @@ body {
     .container{
         width: 970px;
     }
+}
 /* large */
-}@media (min-width: 1200px) {
+@media (min-width: 1200px) {
     .container{
         width: 1170px;
     }
-
+}
 header{
     position: absolute;
     z-index: 99;
 }   
-}
+
 header .container{
     display: flex;
     align-items: center;
