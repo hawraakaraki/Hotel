@@ -1,6 +1,6 @@
 :root{
-    --main-color: #51C4D3; 
-    --secondary-color:#126E82;
+    --main-color: #28ABB9; 
+    --secondary-color: rgb(255, 255, 255);
     --dark-color: #132C33;
     --grey-color: #D8E3E7;
 }
@@ -58,7 +58,7 @@ header .container {
     display: flex;
     align-items: center;
     justify-content: space-between; 
-    border-bottom: 2px solid #54BAB9;
+    border-bottom: 2px solid var(--secondary-color);
 
 }
 @media (max-width: 545px) {
@@ -74,11 +74,16 @@ header .logo {
     font-size: 27px;
     font-weight: bold;
     text-transform: uppercase;
-    color: #51C4D3; 
+    color: var(--secondary-color); 
     height: 72px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+@media (max-width: 761px) {
+    header .logo {
+        height: 40px;
+    }
 }
 header nav i.fa-bars {
     margin: 15px;
@@ -92,13 +97,14 @@ header nav i.fa-bars {
     top: 100%;
     left: 0;
     width: 100%;
-    height: 200px;
+    height: 250px;
     background-color: rgba(3, 3, 3, 10%);
  }
 
      @media (max-width: 991px) {
         header .container ul li  {
             padding-bottom: 20px;
+            padding-top: 10px;
          }
     }
 
@@ -146,8 +152,8 @@ header .container nav li a:hover {
 }
 header .icons i{
     margin: 15px;
-    color: #54BAB9;
-    font-size: 27px;
+    color: white;
+    font-size: 20px;
 }
 
 .landing {
@@ -156,6 +162,11 @@ header .icons i{
     height: 100vh;
     background-size: cover;
     position: relative;
+}
+@media (max-width: 450px) {
+    .landing {
+        background-image: url(../images/pexels-julie-aagaard-2467285.jpg);
+    }
 }
 .landing::before { 
     content: "";
@@ -167,3 +178,97 @@ header .icons i{
     background-color: hsla(0, 0%, 0%, 0.644);
     z-index: 3;
 }
+.landing .text {
+position: absolute;
+top: 40%;
+left: 50%;
+transform: translate(-50% ,-50%);
+z-index: 88;
+font-family: 'Merriweather', serif;
+}
+h1 {
+font-size: 50px;
+letter-spacing: 4px;
+text-transform: uppercase;
+color: white;
+
+}
+.star {
+font-size: 30px;
+position: absolute;
+color: white;
+left: 70px;
+bottom: -15px;
+}
+.shape::before {
+    content: "";
+    background-color: #D8E3E7;
+    width: 100px;
+    height: 2px;
+    position: absolute;
+    left: -30px;
+   
+}
+.shape::after {
+    content: "";
+    background-color: #D8E3E7;
+    width: 100px;
+    height: 2px;
+    position: absolute;
+    left: 105px;
+}
+.hotel {
+font-size: 70px;
+color: white;
+text-transform: uppercase;
+position: absolute;
+bottom: -100px;
+left: -35px;
+font-weight: bold ;
+}
+.landing .change-background {
+    position: absolute;
+    color: #D8E3E7;
+    top: 50%;
+    z-index: 99;
+    font-size: 30px;
+    transform: translatey(-50%);
+    background-color: #28aab954;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.landing .fa-angle-right {
+right: 60px;
+}
+.landing .fa-angle-left {
+    left: 60px;
+    }
+    @media (max-width : 761px) {
+        .landing .change-background {
+            display: none;
+        }
+    }
+    .landing .bullets {
+        position: absolute;
+        left: 50%;
+        transform: translatex(-50%);
+        bottom: 30px;
+        display: flex;
+        z-index: 77;
+    }
+    .landing .bullets li {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 1px solid white;
+        margin-right: 4px;
+    color: transparent;
+    }
+    .landing .bullets .active {
+        background-color: var(--main-color);
+        border-color: var(--main-color);
+    }
