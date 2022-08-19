@@ -89,6 +89,8 @@ header nav i.fa-bars {
     margin: 15px;
     color: #54BAB9;
     font-size: 27px;
+    display: flex;
+    justify-content: flex-end;
  }
  header nav i.fa-bars:hover + ul  {
     display: flex;
@@ -120,7 +122,7 @@ header .container nav ul {
     height: 72px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: end;
 }
 @media (min-width: 546px)  and (max-width: 991px) {
     header .container nav ul  {
@@ -133,6 +135,7 @@ font-weight: bold;
 padding:  15px;
 text-transform: capitalize;
 color: var(--main-color);
+
 }
 header .container nav li a:hover {
     color: var(--grey-color);
@@ -154,6 +157,7 @@ header .icons i{
     margin: 15px;
     color: white;
     font-size: 20px;
+
 }
 
 .landing {
@@ -163,11 +167,11 @@ header .icons i{
     background-size: cover;
     position: relative;
 }
-@media (max-width: 450px) {
+/* @media (max-width: 450px) {
     .landing {
         background-image: url(../images/pexels-julie-aagaard-2467285.jpg);
     }
-}
+} */
 .landing::before { 
     content: "";
     position: absolute;
@@ -191,7 +195,7 @@ font-size: 50px;
 letter-spacing: 4px;
 text-transform: uppercase;
 color: white;
-
+min-width: 200px;
 }
 .star {
 font-size: 30px;
